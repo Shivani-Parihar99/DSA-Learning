@@ -16,4 +16,21 @@ int immediateGreater(int arr[], int n, int x){
         
     }
 
-/* Given an array arr[] of size N containing positive integers and an integer X, find the element in the array which is smaller than X and closest to it.
+// Given an array arr[] of size N containing positive integers and an integer X, find the element in the array which is smaller than X and closest to it.
+int immediateSmaller(int arr[], int n, int x)
+    {
+        // your code here
+        int diff = INT_MAX;
+        int ans = -1;
+        
+        for(int i = 0;i<n;i++){
+            if((arr[i] < x) && (x - arr[i]) < diff){
+                ans = arr[i];
+                diff = x- arr[i];
+            }
+        }
+    
+        
+        return ans;
+        
+    }
